@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+ * { 
+    box-sizing: border-box; 
+    margin:0;
+    padding:0;
+  } 
+
+.navbar{
+    color: #2984A0!important;
+}
+
+.nav_img{
+    height: 50px !important;
+}
+
+.logo {
+      float: center!important;
+      width: 700px!important;
+      margin-right: 0px;
+      margin-left: 50px;
+      margin-top: 70px;
+      margin-bottom: 0px;
+  }
+
+  .logo_home {
+    float: center!important;
+    width: 700px!important;
+    margin-right: 0px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+  .hometext{
+      color: #2984A0;
+      font-family: Avenir Next !important;
+      font-size: 18px; 
+      text-align: justify!important;
+      line-height: 1.5rem!important;
+      margin-left: 60px!important;
+      margin-right: 60px!important;
+      margin-top: 50px!important;
+  }
+  
+  .copyright{
+    color: #2984A0!important;
+    font-family: Avenir Next !important;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 10x!important; 
+  }
+
+  /* code for all programs */
+  .pagetitle{
+    text-align: center!important;
+    color: #2984A0;
+    font-family: Avenir Next !important;
+    margin-top: 50px;
+  }
+  
+  /* All photo headings */
+  .photoheading{
+    float: center!important;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 600px;
+    height: 400px;
+  }
+
+/* code for all programs */
+  .medtext{
+    color: #2984A0;
+    font-family: Avenir Next !important;
+    font-size: 18px!important; 
+    text-align: justify!important;
+    line-height: 1.5rem!important;
+    margin-left: 60px!important;
+    margin-right: 60px!important;
+    margin-top: 60px!important;
+  }
+
+  /* 'Meet Our Team' Headshots */
+  .dana-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .cesar-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .gerald-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  .angela-headshot {
+    float: left;
+    margin-right: 20px;
+    align: middle;
+    width: 200px;
+  }
+
+  
