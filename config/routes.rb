@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'dental' => 'static#dental'
   get 'education' => 'static#education'
   get 'team' => 'static#team'
-  get 'FAQ' => 'static#FAQ'
-  get 'COC' => 'static#COC'
+  get 'faq' => 'static#FAQ'
+  get 'coc' => 'static#COC'
   get 'payment' => 'static#payment'
 end

@@ -7,44 +7,42 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
-						
+						 <!-- <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a> -->
+						<%= link_to 'HOME', root_path, class: 'nav-link' %>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/nica_snapshots">NICARAGUA SNAP-SHOTS</a>
+						<%= link_to 'Nicaraguan Snapshots', root_path, class: 'nav-link' %>
 					</li>
 								</div>
 						</li> 
-						<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							PROGRAMS
+						<li class:"nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >PROGRAMS</a>
+							
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/medical">MEDICAL</a>
-							<a class="dropdown-item" href="/dental">DENTAL</a>
-							<a class="dropdown-item" href="/education">EDUCATION SUPPORT</a>
-							<a class="dropdown-item" href="#">THE INNOVATION LAB</a>
-							<a class="dropdown-item" href="/FAQ">FAQs</a>
-							<a class="dropdown-item" href="/COC">CODE OF CONDUCT</a>
+							<%= link_to 'MEDICAL', medical_path, class:"dropdown-item" %>
+							<%= link_to 'DENTAL', dental_path, class:"dropdown-item" %>
+							<%= link_to 'EDUCATION', education_path, class:"dropdown-item" %>
+							<%= link_to 'THE INNOVATION LAB', root_path, class:"dropdown-item" %>
+							<%= link_to 'FAQs', faq_path, class:"dropdown-item" %>
+							<%= link_to 'CODE OF CONDUCT', coc_path, class:"dropdown-item" %>
 						</div>
 					</li>
 <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								TRIPS
-							</a>
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TRIPS</a>
+	
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">UPCOMING TRIPS</a>
-								<a class="dropdown-item" href="/payment">MAKE A PAYMENT</a>
+								<%= link_to 'UPCOMING TRIPS', root_path, class:"dropdown-item" %>
+								<%= link_to 'MAKE A PAYMENT', payment_path, class:"dropdown-item" %>
 								</div>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link" href="#">LOGIN</a>
+								<%= link_to 'LOGIN', root_path, class:"nav-link" %>
 							</li>
 							<li class="nav-item">
-									<a class="nav-link" href="/team">MEET OUR TEAM</a>
-								</li>
+									<%= link_to 'MEET OUR TEAM', team_path, class:"nav-link" %>
 								<li class="nav-item">
-										<a class="nav-link" href="#">CONTACT US</a>
+										<%= link_to 'CONTACT US', root_path, class:"nav-link" %>
 									</li>
 			</div>
 					<!-- <li class="nav-item">
