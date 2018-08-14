@@ -1,0 +1,39 @@
+<div class="logo_home">
+	<%= image_tag('SCHeader.svg', alt:'Synaptic Communities Logo', class: 'logo_home') %> 
+</div>  
+
+<div class="container">	
+    <div class= "hometext">
+    <h1>Upcoming Trips</h1>
+    <p>Below is a listing of available upcoming trips by university. </p>
+    <p>Click on the trip name to proceed.</p>
+    <br>
+    <br>
+    <p>Search trips:</p>
+</div>
+<div class="trip-description" >
+    <h2>Trip</h2>
+    <h2>Date</h2>
+    <h2>Price</h2>
+</div>
+<% @trips.each do |t| %> 
+    <div class="trip-container hometext">
+        <div class="trip-a">
+            <p><strong><%= t.name %></strong></p>
+            <p>Registration Deadline <%= t.deadline %></p>
+        </div>
+        <div class="trip-b">
+            <div class="trip-details">
+                <p><%= t.startdate %> - <%= t.enddate %></p>
+                <p><%= t.cost %></p>
+            </div>
+            <div>
+                <%= link_to "Register", trip_registration_path(t) %>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
+    
+

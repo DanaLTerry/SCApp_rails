@@ -126,4 +126,26 @@
     width: 200px;
   }
 
+  .trip-container {
+    display: flex; 
+    flex-direction: row; 
+    height: 10%; 
+}
+
+.trip-a, .trip-b {
+    width: 45%;
+}
+
+.trip-b {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.trip-details {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
   

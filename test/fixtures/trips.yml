@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deadline: MyString
+  university: MyString
+  trip_name: MyString
+  price: MyString
+
+two:
+  deadline: MyString
+  university: MyString
+  trip_name: MyString
+  price: MyString
