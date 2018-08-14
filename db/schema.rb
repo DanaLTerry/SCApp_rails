@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_211344) do
+ActiveRecord::Schema.define(version: 2018_08_14_225503) do
+
+  create_table "registrations", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "year_in_school"
+    t.string "education_level"
+    t.string "street_address"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
+    t.string "country"
+    t.string "email"
+    t.string "confirm_email"
+    t.string "phone"
+    t.string "spanish_level"
+    t.string "gender"
+    t.string "birthdate"
+    t.string "passport_number"
+    t.string "passport_country"
+    t.boolean "passport_requirement"
+    t.string "emergency_contact1_name_first"
+    t.string "emergency_contact1_name_last"
+    t.string "emergency_contact1_email"
+    t.string "emergency_contact2_name_first"
+    t.string "emergency_contact2_name_last"
+    t.string "emergency_contact2_phone"
+    t.string "emergency_contact2_email"
+    t.string "dietary_info"
+    t.boolean "read_agreement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
