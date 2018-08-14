@@ -23,4 +23,7 @@ class StaticController < ApplicationController
 
     def payment
     end
+
+    def registration
+    end
 end

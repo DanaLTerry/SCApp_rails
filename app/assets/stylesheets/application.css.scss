@@ -38,7 +38,9 @@
 
   .logo_home {
     float: center!important;
-    width: 700px!important;
+    width: auto;
+    height: auto;
+    max-width: 100%!important;
     margin-right: 0px;
     margin-left: 50px;
     margin-top: 100px;

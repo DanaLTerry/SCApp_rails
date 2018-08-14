@@ -1,0 +1,191 @@
+<div class="logo_home">
+		<%= image_tag('SCHeader.svg', alt:'Synaptic Communities Logo', class: 'logo_home') %> 
+		</div>  
+
+	<div class="container">
+		
+		
+			<div class= "hometext">
+
+            <div class="container-fluid">
+   <div class="row">
+      <div class="col-xs-12">
+         <div class="col-xs-2">
+            <%= link_to root_path do %>
+            <i class="fa fa-angle-left icon-back color-black" aria-hidden="true"></i>
+            <%end%>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="">
+   <div class="">
+      <%= nested_form_for(@profile) do |f| %>
+      <% if @profile.errors.any? %>
+      <div id="error_explanation">
+         <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+         <ul>
+            <% @profile.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+         </ul>
+      </div>
+      <% end %>
+      <div class="form-group">
+         <label >First and Last Name</label>
+         <%= f.text_field :name, placeholder: "First and Last Name", value:"#{current_user.first_name.capitalize} #{current_user.last_name.capitalize}", class:"form-control profile name" %>
+      </div>
+      <div class="form-group">
+         <label>Current Year in School</label>
+         <%= f.text_field :year, placeholder: "Current Year in School"%>
+      </div>
+      <div class="form-group">
+         <label>Level of Education (pre-med, post-med, etc.)</label>
+         <%= f.text_field :education, placeholder: "Level of Education"%>
+      </div>
+      <div class="form-group">
+         <label>Street Address</label>
+         <%= f.text_field :address, placeholder: "address"%>
+      </div>
+      <div class="form-group">
+         <label>City</label>
+         <%= f.text_field :city, placeholder: "city"%>
+      </div>
+      <div class="form-group">
+         <label>State | Province</label>
+         <%= f.select :state, {}, {}, {class:"form-control bfh-states profile name" , "data-country" => "profile_country" }%>
+      </div>
+      <div class="form-group">
+         <label>Zip/Postal Code</label>
+         <%= f.text_field :code, placeholder: "postal code"%>
+      </div>
+      <div class="white-space space-small"></div>
+         <label>Country</label>
+         <%= f.select :country, {}, {}, {class:"form-control bfh-countries profile name", "data-country" => "United States", "data-name" => "country" }%>
+      </div>
+      <div class="form-group">
+         <label>Email</label>
+         <%= f.text_field :email, placeholder: "Email", value:"#{current_user.email}"%>
+      </div>
+      <div class="form-group">
+         <label>Confirm Email</label>
+         <%= f.text_field :email, placeholder: "Confirm Email", value:"#{current_user.email}"%>
+      </div>
+      <div class="form-group">
+         <label>Phone Number</label>
+         <%= f.text_field :phone_number, placeholder: "phone number", value:"#{current_user.phone_number}"%>
+      </div>
+      <div class="form-group">
+            <label>Spanish Language Level</label>
+            <%= skill_form.select :level, options_for_select([["Beginner", :Beginner],["Intermediate", :Intermediate],["Advanced", :Advanced], ["Fluent", :Fluent]]),{},{class:"form-control profile name"} %>
+         </div>
+         <div class="form-group">
+            <label>Gender</label>
+            <%= gender_form.select :gender, options_for_select([["female","female"],["male", "male"]]),{},{class:"form-control profile blue"} %>
+         </div>
+         <div class="form-group">
+         <label>Birth Date</label>
+         <%= f.text_field :date, placeholder: "birth date", value:"#{current_user.date}"%>
+      </div>
+      <div class="form-group">
+         <label>Passport Number</label>
+         <%= f.text_field :passport_number, placeholder: "passport number", value:"#{current_user.passport_number}"%>
+      </div>
+      <div class="white-space space-small"></div>
+         <label>Passport Issueing Country</label>
+         <%= f.select :country, {}, {}, {class:"form-control bfh-countries profile name", "data-country" => "United States", "data-name" => "country" }%>
+      </div>
+      <div class="from-group">
+         <%= f.label :passport, "My passport is valid for at least 6 months AFTER departure date or I will have a new passport before departure:" %><br>
+         <%= f.collection_check_boxes :yes, {}, {class:"checkbox-inline"} %>
+      </div>
+      <div class="form-group">
+         <label>Two Emergency Contacts</label>
+         <%= f.text_field :name, placeholder: "two emergency contacts"%>
+      </div>
+      <div class="form-group">
+         <label>Special Dietary Need(vegetarian, etc.)</label>
+         <%= f.text_field :name, placeholder: "two emergency contacts"%>
+      </div>
+      <div class="form-group">
+         <label>For emergency and planning purposes, please list any significant medical history, medications you are taking, or known allergies</label>
+         <%= f.text_field :diet, placeholder: "dietary needs"%>
+      </div>
+
+      <h3>STUDENT PARTICIPATION AGREEMENT<h3>
+<p>All persons/students participating in any travel program of Synaptic Communities, hereafter referred to as 
+"SC", must accept the following statements:1. I do voluntarily and without reservation on behalf of myself, 
+my heirs and my estate, release and discharge absolutely and forever, SC, and any of its agents or program 
+partners, and waive all claims, demands, of whatever nature for any injury, loss, damage, accident, delay, 
+actions or cause of action, known or unknown, which I now have or may acquire in the future, irregularity or 
+expense arising out of or directly or indirectly relating to my participation in a SC program, and arising 
+from the use of any vehicle or services, strikes, war, acts of terrorism, weather, sickness, quarantine, 
+government, airline, buses, transporting company, firm, individual, or agency. I understand the terms of 
+this Release and the consequences of it and acknowledge that I have not executed it under duress.</p>
+
+<h3>HIS IS A RELEASE.<h3>
+<ol>
+<p>1. I grant SC, or one of its agents, full authority to take whatever action they feel is warranted 
+regarding my health and safety and that they may arrange medical treatment for me, at my expense and that 
+if deemed necessary by the SC personnel and/or local medical authorities, I will be sent back to the 
+United States at my own expense for further medical treatment.</p>
+2. I will comply with all the required visas and international travel documents requested by authorities in 
+destination and transit countries in which I travel, as well as their expiration dates for both passports and 
+Visas. All passports must not expire any sooner than six months after the trip date. I understand that failing 
+to comply will result in trip cancellation at my own expense. I understand that I must bring a crisp $10 for 
+entry into Nicaragua.</p>
+<p>3. If I cancel my trip for any reason or fail to comply with any international travel regulations, 
+THERE WILL BE NO REFUNDS.</p>
+<p>4. I understand this is a supervised program and agree to uphold individual and group standards set 
+forth by SC personnel. These standards include: -No alcohol abuse or any illicit drugs. -No females in male 
+sleeping area and vice versa. -A midnight curfew applies for the entire trip. SC will no longer be responsible
+ of students after the end of the seventh day of the program. This is to give students freedom to make their 
+ own travel arrangements after the end of the program. -Students with special diet requirements must bring 
+ their necessary dietary supplements. -If I have any reason to leave the trip group, I must first obtain the 
+ permission of a responsible SC staff member. This is for safety reasons.</p>
+<p>5. If my conduct is deemed incompatible with the interests and the standards of the group and if my 
+enrollment is TERMINATED, no refunds can be expected and returning to the United States is at my own expense. 
+A verbal warning will be provided prior to expulsion from the program. A written report will be provided 
+later.</p>
+<p>6. I understand this is NOT a tourist-type program, but is a learning program as well as an international 
+humanitarian team effort serving disadvantaged people in sometimes remote and difficult circumstances which, 
+on occasion, may include travel over long distances, on land, air and water, on safe transportation.</p>
+<p>7. I grant SC permission to reproduce photographs or movies, of me taken during the period of time that 
+I am participating in this program, including written statements I may make concerning this program.</p>
+<p>8. The calendar deadline for all SC trip applications and all SC trip payments is eight (8) weeks before 
+the beginning trip date for which you have applied. Our staff needs this to finalize reservations and 
+services for you. When you submit an application, you will be placed on the ''applied for'' list for that trip. 
+When you submit your payment you will be placed on the ''final trip list''.</p>
+<p>9. I declare that I am not addicted or habituated to the use of non-/or prescription mood altering 
+drugs/chemicals, including alcohol, and will not seek these drugs while on a SC trip.</p>
+<p>10. A midnight curfew applies for the entire trip for safety reasons. This means that all trip participants 
+and SC staff must be inside our hotel before midnight and remain there the rest of the night.</p>
+<p>11. No alcohol abuse or any illicit drug use will be allowed. If this is violated, the participant(s) 
+will be specifically warned, verbally and in writing, and a second violation can result in a dismissal of 
+that participant from the remainder of the trip. There will be no refunds and any additional related 
+expenses will be paid by that trip participant.</p>
+<p>12. Travel and health insurance is the responsibility of each trip participant.</p>
+<p>13. Any trip participant activities either before the in-country arrival day or after the end of the 
+seventh day of the program are not the responsibility of SC. This includes any tours, visits or sightseeing 
+that I may elect to do in the trip country or elsewhere. I do those things upon my own initiative and 
+responsibility and at my own risk, whether before or after the SC trip.</p>
+<ol>
+
+<p>Please show this agreement to your parents or any other person(s) who may feel a shared responsibility for your well-being.</p>
+
+<p>BE SURE TO MAKE YOUR OWN COPY OF THIS AGREEMENT FOR YOUR RECORDS</p>
+
+<div class="from-group">
+         <%= f.label :yes, "I have read and accept this agreement" %><br>
+         <%= f.collection_check_boxes :yes, {}, {class:"checkbox-inline"} %>
+      </div>
+      <div class="col-xs-6 push-xs-3">
+         <%= f.submit "GUARDAR", class: "btn btn-register btn-orange btn-block" %>
+      </div>
+      <% end %>
+        <div class="clearfix"></div>
+   </div>
+</div>
+
+		    </div>
+            </div>

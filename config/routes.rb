@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get 'faq' => 'static#FAQ'
   get 'coc' => 'static#COC'
   get 'payment' => 'static#payment'
+  get 'registration' => 'static#registration'
 end
