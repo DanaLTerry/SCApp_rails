@@ -33,7 +33,7 @@
       </div>
       <%# end %>
 
-    <% form_for @user
+    <% form_for @user %>
     <div class="form-group">
             <label>Title</label>
             <%= skill_form.select :title, options_for_select([["Dr.", :Dr],["RN", :RN], ["Ms.", :Ms.],["Mr.", :Mr.]]),{},{class:"form-control profile name"} %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_225503) do
+ActiveRecord::Schema.define(version: 2018_08_14_235331) do
 
   create_table "registrations", force: :cascade do |t|
     t.string "first_name"
@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 2018_08_14_225503) do
     t.string "emergency_contact2_email"
     t.string "dietary_info"
     t.boolean "read_agreement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "medical"
+    t.string "title"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "deadline"
+    t.string "university"
+    t.string "trip_name"
+    t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
