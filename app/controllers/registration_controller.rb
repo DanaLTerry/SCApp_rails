@@ -8,5 +8,6 @@ class RegistrationController < ApplicationController
 
     def index
         @trips = trip.all 
+        @states = CS.states(params[:country])
     end
 end

@@ -25,6 +25,7 @@ class StaticController < ApplicationController
     end
 
     def registration
+
     end
 
     def trips

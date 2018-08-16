@@ -14,8 +14,9 @@ Rails.application.routes.draw do
 
   get 'registration/index'
   root to: 'trips#index'
+  resources :states, only: :index
   resources :trips do
-  resources :registration
+    resources :registration
   end 
 
 end
