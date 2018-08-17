@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'coc' => 'static#COC'
   get 'payment' => 'static#payment'
   get 'registration' => 'static#registration'
-  # get 'trips' => 'static#trips'
+  # gerat 'trips' => 'static#trips'
 
 resources :states, only: :index
 
