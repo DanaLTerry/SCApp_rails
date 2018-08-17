@@ -4,7 +4,7 @@ class TripsController < ApplicationController
     # GET /trips
     # GET /trips.json
     def index
-      @trips = Trips.all
+      @trips = Trip.all
     end
   
     # GET /trips/1
@@ -14,7 +14,7 @@ class TripsController < ApplicationController
   
     # GET /trips/new
     def new
-      @trips = Trip.new
+      @trip = Trip.new
     end
   
     # GET /trips/1/edit
@@ -24,11 +24,11 @@ class TripsController < ApplicationController
     # TRIP/trips
     # TRIP /trips.json
     def create
-      @trip = Trip.new(post_params)
+      @trip = Trip.new(trip_params)
   
       respond_to do |format|
         if @trip.save
-          format.html { redirect_to @Trip, notice: 'Post was successfully created.' }
+          format.html { redirect_to @trip, notice: 'Trip was successfully created.' }
           format.json { render :show, status: :created, location: @trip }
         else
           format.html { render :new }

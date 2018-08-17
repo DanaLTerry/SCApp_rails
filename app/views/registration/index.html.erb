@@ -1,0 +1,17 @@
+<h1>Trips <%= @trip.trip_name%> + Registration</h1>
+<h4><p>Trip</p></h4>
+
+<p><%= @trip.university %></p>
+<p><%= @trip.deadline %></p>
+<p><%= @trip.price %></p>
+
+<hr>
+<h4>Registration</h4>
+<div class= "registration-container">
+    <% @registration.each do |r| %>
+    <div class= "registration">
+    </div>
+    <% end %>
+</div>
+
+<%= link_to 'Back', root_path %>

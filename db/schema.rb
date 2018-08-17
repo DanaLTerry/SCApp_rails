@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_14_235331) do
+ActiveRecord::Schema.define(version: 2018_08_16_235038) do
 
   create_table "registrations", force: :cascade do |t|
     t.string "first_name"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2018_08_14_235331) do
     t.datetime "updated_at", null: false
     t.string "medical"
     t.string "title"
+    t.integer "trip_id"
+    t.index ["trip_id"], name: "index_registrations_on_trip_id"
   end
 
   create_table "trips", force: :cascade do |t|

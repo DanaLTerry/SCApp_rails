@@ -1,0 +1,27 @@
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <!-- Country -->
+    <%= label_tag :country %>
+    <%= select_tag :country, options_for_select(CS.countries.map { |c| [c[1], c[0]] } ) %>
+  </div>
+
+  <div class="field">
+    <!-- State -->
+    <%= label_tag :state %>
+    <%= select_tag :state, options_for_select([]) %>
+  </div>
+
+  <div class="field">
+    <!-- City -->
+    <%= form.label :hometown %>
+    <%= form.select :hometown, options_for_select([]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

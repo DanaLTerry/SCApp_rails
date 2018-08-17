@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trips</h1>
+
+
+    <% @trips.each do |trip| %>
+      <div>
+        <h3><%= trip.trip_name %></h3>
+        <p><%= trip.university %></p>
+        <p><%= trip.deadline %></p>
+        <p><%= trip.price %></p>
+        <div>
+          <p><%= link_to 'Registration', new_trip_registration_path(trip) %></p>
+          <p><%= link_to 'Edit', edit_trip_path(trip) %></p>
+          <p><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  
+<br>
+
+<%= link_to 'New Trip', new_trip_path %>
