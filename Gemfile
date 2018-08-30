@@ -34,8 +34,6 @@ group :development do
   gem 'rails_layout'
 end
 group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
   gem 'pg'
 end
+

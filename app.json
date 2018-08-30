@@ -1,0 +1,23 @@
+{
+    "name": "Synaptic Communities",
+    "description": "Synaptic Communities webapp",
+    "website": "http://synapticcommunities.com",
+    "repository": "https://github.com/DanaLTerry/SCApp_rails",
+    "success_url": "/welcome",
+    "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
+    "env": {
+      "RAILS_ENV": "development",
+      "COOKIE_SECRET": {
+              "description": "This gets generated",
+              "generator": "secret"
+      },
+      "SETUP_BY": {
+              "description": "Who initiated this setup",
+              "value": "DanaLTerry"
+      }
+    },
+    "scripts": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+
