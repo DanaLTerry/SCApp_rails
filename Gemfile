@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'city-state', '~> 0.0.13'
+gem 'pg', '~> 0.18.4'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -34,6 +35,5 @@ group :development do
   gem 'rails_layout'
 end
 group :development, :test do
-  gem 'pg'
 end
 
